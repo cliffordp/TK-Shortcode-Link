@@ -28,6 +28,9 @@ Basically, just a utility plugin.
 * [tklink url="http://www.google.com/" class="googlie" target="parent"]A googglie Google link with parent target[/tklink]
 	* Outputs: `<a class="googlie" href="http://www.google.com/" target="_parent">A googglie Google link with parent target</a>`
 
+
+Developers may contribute at https://github.com/cliffordp/TK-Shortcode-Link
+
 = FYI: =
 * All links have a class of `tklink` added unless you specify your own class per link (see examples above)
 * No styling of `tklink` or otherwise is added via this plugin.
