@@ -3,7 +3,7 @@
 Plugin Name: TK Shortcode Link
 Description: Create links with a shortcode
 Author: TourKick
-Version: 1.1
+Version: 1.2
 Author URI: http://tourkick.com/?utm_source=wordpressdotorg&utm_medium=tkshortcodelinkplugin&utm_content=authoruri&utm_campaign=tkshortcodelinkplugin
 License: GPLv2 (or later)
 */
