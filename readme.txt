@@ -21,12 +21,10 @@ Basically, just a utility plugin.
 * class
 
 = Examples: =
-* [tklink url="http://www.nike.com/"]Just do it[/tklink]
-	* Outputs: `<a class="tklink" href="http://www.nike.com/">Just do it</a>`
-* [tklink url="http://www.pagelinestheme.com/" target="blank"]Open PageLinesTheme.com in a new window[/tklink]
-	* Outputs: `<a class="tklink" href="http://www.pagelinestheme.com/" target="_blank">Open PageLinesTheme.com in a new window</a>`
-* [tklink url="http://www.google.com/" class="googlie" target="parent"]A googglie Google link with parent target[/tklink]
-	* Outputs: `<a class="googlie" href="http://www.google.com/" target="_parent">A googglie Google link with parent target</a>`
+* `[tklink url="https://www.nike.com/"]Just do it[/tklink]`
+	* Outputs: `<a class="tklink" href="https://www.nike.com/">Just do it</a>`
+* `[tklink url="http://www.google.com/" class="googlie" target="blank"]A googglie Google link that will open in a new tab[/tklink]`
+	* Outputs: `<a class="googlie" href="https://www.google.com/" target="_blank">A googglie Google link that will open in a new tab</a>`
 
 Developers may contribute at https://github.com/cliffordp/tk-shortcode-link
 
