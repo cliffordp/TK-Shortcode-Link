@@ -3,8 +3,6 @@ Contributors: cliffpaulick
 Tags: shortcode, link, target, utility
 Requires at least: 2.5.1
 Tested up to: 4.2.1
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Stable tag: 1.2.1
 License: GPL version 3 or any later version
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
