@@ -3,9 +3,9 @@ Contributors: cliffpaulick
 Tags: shortcode, link, target, utility
 Requires at least: 2.5.1
 Tested up to: 4.2.1
-Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Stable tag: 1.2.1
 
 Create links with a shortcode. It's that simple.
 
@@ -60,13 +60,20 @@ No screenshots necessary. Each theme's links are styled differently.
 
 == Changelog ==
 
+= 1.2.1 =
+* March 5, 2019
+* License changed from GPLv2+ to GPLv3+
+* Readme compatibility changed to WordPress version 5.1
+
 = 1.2 =
 * April 28, 2015
 * Readme compatibility changed to WordPress version 4.2.1
+
 = 1.1 =
 * August 30, 2013
 * Now uses `tklink` instead of `link` due to being too generic (e.g. conflicts with PageLines Theme)
 * **You MUST change any and all existing shortcodes manually.** This should not have to change again.
+
 = 1.0 =
 * August 19, 2013
 * Initial release
