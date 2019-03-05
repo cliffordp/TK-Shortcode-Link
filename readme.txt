@@ -1,8 +1,8 @@
-=== Plugin Name ===
+=== TK Shortcode Link ===
 Contributors: cliffpaulick
 Tags: shortcode, link, target, utility
 Requires at least: 2.5.1
-Tested up to: 4.2.1
+Tested up to: 5.1
 Stable tag: 1.2.1
 License: GPL version 3 or any later version
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -28,8 +28,7 @@ Basically, just a utility plugin.
 * [tklink url="http://www.google.com/" class="googlie" target="parent"]A googglie Google link with parent target[/tklink]
 	* Outputs: `<a class="googlie" href="http://www.google.com/" target="_parent">A googglie Google link with parent target</a>`
 
-
-Developers may contribute at https://github.com/cliffordp/TK-Shortcode-Link
+Developers may contribute at https://github.com/cliffordp/tk-shortcode-link
 
 = FYI: =
 * All links have a class of `tklink` added unless you specify your own class per link (see examples above)
