@@ -10,17 +10,15 @@ License: GPL version 3 or any later version
 
 function tklink_shortcode( $atts, $content = null ) {
 
-  // Attributes
-	extract( shortcode_atts(
-		array(
-			'url' => '',
-			'target' => '', //e.g. "blank", not "_blank"
-			'class' => 'tklink',
-		), $atts )
+	$defaults = array(
+		'url'    => '',
+		'target' => '', //e.g. "blank", not "_blank"
+		'class'  => 'tklink',
 	);
 
 	$esctarget = esc_html($target);
 	$escclass = esc_html($class);
+	$atts = shortcode_atts( $defaults, $atts, 'tklink' );
 
 	// Code
 	if( empty($url) ){
