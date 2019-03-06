@@ -22,6 +22,10 @@ function tklink_shortcode( $atts, $content = null ) {
 
 	$content = esc_html( $content );
 
+	if ( empty( $content ) ) {
+		$content = $atts['url'];
+	}
+
 	if ( empty( $atts['url'] ) ) {
 		if ( current_user_can( 'edit_posts' ) ) {
 		} else {

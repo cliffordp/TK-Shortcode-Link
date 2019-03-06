@@ -61,6 +61,7 @@ No screenshots necessary. Each theme's links are styled differently.
 * March 5, 2019
 * Now passes the shortcode name to `shortcode_atts()` to allow filtering this plugin's shortcode.
 * Now escapes additional output.
+* Now displays the URL as the anchor text if the shortcode's content is empty. (Still requires the closing shortcode tag.)
 * Fix capability required to display error message.
 * License changed from GPLv2+ to GPLv3+
 * Readme compatibility changed to WordPress version 5.1
