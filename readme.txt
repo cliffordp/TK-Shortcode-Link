@@ -60,6 +60,7 @@ No screenshots necessary. Each theme's links are styled differently.
 = 1.2.1 =
 * March 5, 2019
 * Now passes the shortcode name to `shortcode_atts()` to allow filtering this plugin's shortcode.
+* Now escapes additional output.
 * Fix capability required to display error message.
 * License changed from GPLv2+ to GPLv3+
 * Readme compatibility changed to WordPress version 5.1

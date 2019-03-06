@@ -16,21 +16,21 @@ function tklink_shortcode( $atts, $content = null ) {
 		'class'  => 'tklink',
 	);
 
-	$esctarget = esc_html($target);
-	$escclass = esc_html($class);
 	$atts = shortcode_atts( $defaults, $atts, 'tklink' );
 
-	// Code
-	if( empty($url) ){
-			return '<span style="color:red; font-weight:bold;">LINK SHORTCODE without URL attribute. Please remove the shortcode or add a link to resolve.</span>' . $content;
+	$target = esc_attr( $atts['target'] );
+
+	$content = esc_html( $content );
+
+	if ( empty( $atts['url'] ) ) {
 		if ( current_user_can( 'edit_posts' ) ) {
 		} else {
 			return $content;
 		}
-	} elseif( empty($esctarget) ){
-		return '<a class="' . $escclass . '" href="' . $url . '">' . $content . '</a>';
+	} elseif ( empty( $target ) ) {
+		return '<a class="' . esc_attr( $atts['class'] ) . '" href="' . esc_url( $atts['url'] ) . '">' . $content . '</a>';
 	} else {
-		return '<a class="' . $escclass . '" href="' . $url . '" target="_' . $esctarget . '">' . $content . '</a>';
+		return '<a class="' . esc_attr( $atts['class'] ) . '" href="' . esc_url( $atts['url'] ) . '" target="_' . $target . '">' . $content . '</a>';
 	}
 }
 
