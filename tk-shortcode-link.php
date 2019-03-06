@@ -1,11 +1,12 @@
 <?php
 /*
 Plugin Name: TK Shortcode Link
-Description: Create links with a shortcode
-Author: TourKick
+Description: Create links with a shortcode.
+Author: TourKick (Clifford Paulick)
 Version: 1.2.1
 Author URI: https://tourkick.com/?utm_source=wordpressdotorg&utm_medium=tkshortcodelinkplugin&utm_content=authoruri&utm_campaign=tkshortcodelinkplugin
 License: GPL version 3 or any later version
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 
 function tklink_shortcode( $atts, $content = null ) {

@@ -46,7 +46,7 @@ It shouldn't conflict with any other themes or plugins and may have duplicate fu
 Please follow these steps to troubleshoot:
 
 1. Disable all other plugins
-1. Activate one of the default WordPress themes (e.g. Twenty Fifteen)
+1. Activate one of the default WordPress themes (e.g. Twenty Nineteen)
 1. Enable WP_DEBUG in wp-config.php.
 
 If you no longer have an error, your issue is not with this plugin.
@@ -65,7 +65,7 @@ No screenshots necessary. Each theme's links are styled differently.
 * Now escapes additional output.
 * Now displays the URL as the anchor text if the shortcode's content is empty. (Still requires the closing shortcode tag.)
 * Fix capability required to display error message.
-* License changed from GPLv2+ to GPLv3+
+* License changed from GPLv2+ to GPLv3+.
 * Readme compatibility changed to WordPress version 5.1
 
 = 1.2 =
