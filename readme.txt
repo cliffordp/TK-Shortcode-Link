@@ -23,7 +23,9 @@ Basically, just a utility plugin.
 = Examples: =
 * `[tklink url="https://www.nike.com/"]Just do it[/tklink]`
 	* Outputs: `<a class="tklink" href="https://www.nike.com/">Just do it</a>`
-* `[tklink url="http://www.google.com/" class="googlie" target="blank"]A googglie Google link that will open in a new tab[/tklink]`
+* `[tklink url="https://www.wordpress.org/"][/tklink]`
+	* Outputs: `<a class="tklink" href="https://www.wordpress.org/">https://www.wordpress.org/</a>`
+* `[tklink url="https://www.google.com/" class="googlie" target="blank"]A googglie Google link that will open in a new tab[/tklink]`
 	* Outputs: `<a class="googlie" href="https://www.google.com/" target="_blank">A googglie Google link that will open in a new tab</a>`
 
 Developers may contribute at https://github.com/cliffordp/tk-shortcode-link
