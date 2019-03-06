@@ -29,8 +29,8 @@ function tklink_shortcode( $atts , $content = null ) {
 
 	// Code
 	if( empty($url) ){
-		if( current_user_can('contributor') ){
 			return '<span style="color:red; font-weight:bold;">LINK SHORTCODE without URL attribute. Please remove the shortcode or add a link to resolve.</span>' . $content;
+		if ( current_user_can( 'edit_posts' ) ) {
 		} else {
 			return $content;
 		}
