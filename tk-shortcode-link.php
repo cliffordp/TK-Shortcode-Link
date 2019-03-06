@@ -1,45 +1,43 @@
 <?php
 /*
 Plugin Name: TK Shortcode Link
-Description: Create links with a shortcode
-Author: TourKick
-Version: 1.2
-Author URI: http://tourkick.com/?utm_source=wordpressdotorg&utm_medium=tkshortcodelinkplugin&utm_content=authoruri&utm_campaign=tkshortcodelinkplugin
-License: GPLv2 (or later)
+Description: Create links with a shortcode.
+Author: TourKick (Clifford Paulick)
+Version: 1.2.1
+Author URI: https://tourkick.com/?utm_source=wordpressdotorg&utm_medium=tkshortcodelinkplugin&utm_content=authoruri&utm_campaign=tkshortcodelinkplugin
+License: GPL version 3 or any later version
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 
-function tklink_shortcode( $atts , $content = null ) {
+function tklink_shortcode( $atts, $content = null ) {
 
-  // Attributes
-	extract( shortcode_atts(
-		array(
-			'url' => '',
-			'target' => '', //e.g. "blank", not "_blank"
-			'class' => 'tklink',
-		), $atts )
+	$defaults = array(
+		'url'    => '',
+		'target' => '', //e.g. "blank", not "_blank"
+		'class'  => 'tklink',
 	);
 
-	// Escaping
-/*
-	$esccontent = esc_html($content); // not used because maybe you want HTML as the content (e.g. image)
-	$escurl = esc_html($url); // not used because maybe you want a javascript URL
-*/
-	$esctarget = esc_html($target);
-	$escclass = esc_html($class);
+	$atts = shortcode_atts( $defaults, $atts, 'tklink' );
 
-	// Code
-	if( empty($url) ){
-		if( current_user_can('contributor') ){
-			return '<span style="color:red; font-weight:bold;">LINK SHORTCODE without URL attribute. Please remove the shortcode or add a link to resolve.</span>' . $content;
+	$target = esc_attr( $atts['target'] );
+
+	$content = esc_html( $content );
+
+	if ( empty( $content ) ) {
+		$content = $atts['url'];
+	}
+
+	if ( empty( $atts['url'] ) ) {
+		if ( current_user_can( 'edit_posts' ) ) {
+			return '<span style="color:red; font-weight:bold;">The <em>tklink</em> shortcode was used without the required "url" shortcode attribute. Please remove the shortcode or add a URL to resolve.</span>' . $content;
 		} else {
 			return $content;
 		}
-	} elseif( empty($esctarget) ){
-		return '<a class="' . $escclass . '" href="' . $url . '">' . $content . '</a>';
+	} elseif ( empty( $target ) ) {
+		return '<a class="' . esc_attr( $atts['class'] ) . '" href="' . esc_url( $atts['url'] ) . '">' . $content . '</a>';
 	} else {
-		return '<a class="' . $escclass . '" href="' . $url . '" target="_' . $esctarget . '">' . $content . '</a>';
+		return '<a class="' . esc_attr( $atts['class'] ) . '" href="' . esc_url( $atts['url'] ) . '" target="_' . $target . '">' . $content . '</a>';
 	}
 }
-// add_shortcode( 'link', 'tklink_shortcode' );
-// conflicted with PageLines Theme ( https://github.com/pagelines/DMS/blob/Dev/includes/class.shortcodes.php#L119 )
-add_shortcode( 'tklink', 'tklink_shortcode' ); // does not conflict with PageLines
+
+add_shortcode( 'tklink', 'tklink_shortcode' );

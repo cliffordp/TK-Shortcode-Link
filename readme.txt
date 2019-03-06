@@ -1,11 +1,11 @@
-=== Plugin Name ===
+=== TK Shortcode Link ===
 Contributors: cliffpaulick
 Tags: shortcode, link, target, utility
 Requires at least: 2.5.1
-Tested up to: 4.2.1
-Stable tag: trunk
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tested up to: 5.1
+Stable tag: 1.2.1
+License: GPL version 3 or any later version
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Create links with a shortcode. It's that simple.
 
@@ -21,15 +21,14 @@ Basically, just a utility plugin.
 * class
 
 = Examples: =
-* [tklink url="http://www.nike.com/"]Just do it[/tklink]
-	* Outputs: `<a class="tklink" href="http://www.nike.com/">Just do it</a>`
-* [tklink url="http://www.pagelinestheme.com/" target="blank"]Open PageLinesTheme.com in a new window[/tklink]
-	* Outputs: `<a class="tklink" href="http://www.pagelinestheme.com/" target="_blank">Open PageLinesTheme.com in a new window</a>`
-* [tklink url="http://www.google.com/" class="googlie" target="parent"]A googglie Google link with parent target[/tklink]
-	* Outputs: `<a class="googlie" href="http://www.google.com/" target="_parent">A googglie Google link with parent target</a>`
+* `[tklink url="https://www.nike.com/"]Just do it[/tklink]`
+	* Outputs: `<a class="tklink" href="https://www.nike.com/">Just do it</a>`
+* `[tklink url="https://www.wordpress.org/"][/tklink]`
+	* Outputs: `<a class="tklink" href="https://www.wordpress.org/">https://www.wordpress.org/</a>`
+* `[tklink url="https://www.google.com/" class="googlie" target="blank"]A googglie Google link that will open in a new tab[/tklink]`
+	* Outputs: `<a class="googlie" href="https://www.google.com/" target="_blank">A googglie Google link that will open in a new tab</a>`
 
-
-Developers may contribute at https://github.com/cliffordp/TK-Shortcode-Link
+Developers may contribute at https://github.com/cliffordp/tk-shortcode-link
 
 = FYI: =
 * All links have a class of `tklink` added unless you specify your own class per link (see examples above)
@@ -47,7 +46,7 @@ It shouldn't conflict with any other themes or plugins and may have duplicate fu
 Please follow these steps to troubleshoot:
 
 1. Disable all other plugins
-1. Activate one of the default WordPress themes (e.g. Twenty Fifteen)
+1. Activate one of the default WordPress themes (e.g. Twenty Nineteen)
 1. Enable WP_DEBUG in wp-config.php.
 
 If you no longer have an error, your issue is not with this plugin.
@@ -60,13 +59,24 @@ No screenshots necessary. Each theme's links are styled differently.
 
 == Changelog ==
 
+= 1.2.1 =
+* March 5, 2019
+* Now passes the shortcode name to `shortcode_atts()` to allow filtering this plugin's shortcode.
+* Now escapes additional output.
+* Now displays the URL as the anchor text if the shortcode's content is empty. (Still requires the closing shortcode tag.)
+* Fix capability required to display error message.
+* License changed from GPLv2+ to GPLv3+.
+* Readme compatibility changed to WordPress version 5.1
+
 = 1.2 =
 * April 28, 2015
 * Readme compatibility changed to WordPress version 4.2.1
+
 = 1.1 =
 * August 30, 2013
 * Now uses `tklink` instead of `link` due to being too generic (e.g. conflicts with PageLines Theme)
 * **You MUST change any and all existing shortcodes manually.** This should not have to change again.
+
 = 1.0 =
 * August 19, 2013
 * Initial release
