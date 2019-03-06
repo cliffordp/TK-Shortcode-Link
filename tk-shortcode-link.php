@@ -28,6 +28,7 @@ function tklink_shortcode( $atts, $content = null ) {
 
 	if ( empty( $atts['url'] ) ) {
 		if ( current_user_can( 'edit_posts' ) ) {
+			return '<span style="color:red; font-weight:bold;">The <em>tklink</em> shortcode was used without the required "url" shortcode attribute. Please remove the shortcode or add a URL to resolve.</span>' . $content;
 		} else {
 			return $content;
 		}
